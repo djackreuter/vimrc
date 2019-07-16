@@ -30,6 +30,7 @@ Plug 'w0rp/ale'
 Plug 'rakr/vim-one'
 Plug 'vim-airline/vim-airline'
 Plug 'hzchirs/vim-material'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'haishanh/night-owl.vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'tpope/vim-fugitive'
