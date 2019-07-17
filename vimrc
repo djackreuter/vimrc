@@ -27,17 +27,17 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'mattn/emmet-vim'
 Plug 'w0rp/ale'
-Plug 'rakr/vim-one'
 Plug 'vim-airline/vim-airline'
-Plug 'hzchirs/vim-material'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'hzchirs/vim-material'
 Plug 'haishanh/night-owl.vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
+Plug 'joshdick/onedark.vim'
+Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'blueshirts/darcula'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -48,21 +48,23 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \}
 
-" different colorschemes
-
+" syntax highlighting
+set background=dark
 "let g:dracula_italic = 0
 "colorscheme dracula
 "highlight Normal ctermbg=None
-" let g:material_style='oceanic'
-" set background=dark
-" colorscheme night-owl
-" colorscheme vim-material
-" colorscheme one
-let g:airline_theme='material'
+" colorscheme darcula
+"let g:airline_theme='material'
+"let g:airline_theme='onedark'
+"let g:material_style='oceanic'
+"colorscheme night-owl
+"colorscheme vim-material
 let ayucolor="mirage"
-" let ayucolor="dark"
 colorscheme ayu
+"colorscheme onedark
+
 
 filetype plugin indent on
 
-map <C-n> :NERDTreeToggle<CR>
+"map <C-n> :NERDTreeToggle<CR>
+map ; :Files<CR>
