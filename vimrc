@@ -1,3 +1,8 @@
+" vmap .uc :s/^#//<CR>:noh<CR>
+" vmap .c :s/^/#/<CR>:noh<CR>
+
+noremap ttt :!prove -lv % <CR>
+noremap 000 :!perl -I lib -c % <CR>
 " Tidy selected lines (or entire file) with zpt:
 nnoremap <silent> zpt :%!perltidy -l=120 -q<Enter>
 vnoremap <silent> zpt :!perltidy -l=120 -q<Enter>
@@ -29,11 +34,12 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mattn/emmet-vim'
 Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'hzchirs/vim-material'
 Plug 'haishanh/night-owl.vim'
-Plug 'ayu-theme/ayu-vim'
+Plug 'ayu-theme/ayu-vim' 
 Plug 'tpope/vim-fugitive'
+Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-commentary'
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
@@ -50,7 +56,7 @@ let g:ale_linters = {
 \}
 
 " syntax highlighting
-set background=dark
+" set background=dark
 "let g:dracula_italic = 0
 "colorscheme dracula
 "highlight Normal ctermbg=None
@@ -58,11 +64,17 @@ set background=dark
 "let g:airline_theme='material'
 "let g:airline_theme='onedark'
 "let g:material_style='oceanic'
-"colorscheme night-owl
+" colorscheme night-owl
+" colorscheme desert
+" colorscheme nord
 "colorscheme vim-material
-let ayucolor="mirage"
-colorscheme ayu
-"colorscheme onedark
+" let ayucolor="mirage" 
+" colorscheme ayu
+colorscheme onedark
+"
+hi Normal ctermbg=none guibg=NONE
+" For Kitty Term 
+let &t_ut=''
 
 
 filetype plugin indent on
